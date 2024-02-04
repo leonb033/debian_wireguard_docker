@@ -88,4 +88,4 @@ replace_string "<CLIENT_COUNT>" $client_count compose.yaml
 replace_string "<LOCAL_NETWORK>" $local_network compose.yaml
 
 # start wireguard container
-sudo docker compose up -d
+sudo docker compose up -d --force-recreate
