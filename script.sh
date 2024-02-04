@@ -69,6 +69,10 @@ echo \
 sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# create docker networks
+sudo docker network create vpn
+sudo docker network create --ingress --subnet=$local_network --ip-range=$local_network local
+
 # create folders
 mkdir -p ~/docker/wireguard
 
