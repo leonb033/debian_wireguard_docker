@@ -70,6 +70,8 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # create docker networks
+sudo docker network rm vpn
+sudo docker network rm local
 sudo docker network create vpn
 sudo docker network create --internal --subnet=$local_network --ip-range=$local_network local
 
